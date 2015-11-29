@@ -9,6 +9,13 @@ function fetch_and_display_posts()
         var posts_array = JSON.parse(xhr.responseText);
 		//alert(posts_array);
 
+		if(xhr.responseText == "FALSE")
+        {
+            alert("Wrong Username and Password", null, "Wrong Creds", "Try Again");
+        } else {
+
+
+
         var html = "";
 
         for(var count = 0; count < posts_array.length; count++)
@@ -24,6 +31,9 @@ function fetch_and_display_posts()
         document.getElementById("posts").innerHTML = html;
         $("#posts").listview("refresh");
     }
+	
+	}
+	
     xhr.send();
 }
 
