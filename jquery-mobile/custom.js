@@ -3,7 +3,7 @@
 function fetch_and_display_posts()
 {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=posts&reusername=" + encodeURIComponent(username));
+    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=posts&username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
     xhr.onload = function(){
 		//alert(xhr.responseText);
         var posts_array = JSON.parse(xhr.responseText);
@@ -28,12 +28,13 @@ function fetch_and_display_posts()
 }
 
 var username = '';
+var password = '';
 
 function login()
 {
 	
     username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    password = document.getElementById("password").value;
 
     if(username == "")
     {
