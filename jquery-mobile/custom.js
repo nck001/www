@@ -3,7 +3,7 @@
 function fetch_and_display_posts()
 {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=posts&username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent('password'));
+    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=posts&username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
     xhr.onload = function(){
 		//alert(xhr.responseText);
         var posts_array = JSON.parse(xhr.responseText);
