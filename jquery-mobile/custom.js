@@ -5,7 +5,7 @@ function fetch_and_display_posts()
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=posts&reusername=" + encodeURIComponent(username));
     xhr.onload = function(){
-		alert(xhr.responseText);
+		//alert(xhr.responseText);
         var posts_array = JSON.parse(xhr.responseText);
 		//alert(posts_array);
 
