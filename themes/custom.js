@@ -1,6 +1,24 @@
 // JavaScript Document
 
-// JavaScript Document
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=login");
+    xhr.onload = function(){
+        if(xhr.responseText == "FALSE")
+        {
+            //alert("Wrong Username and Password", null, "Wrong Creds", "Try Again");
+			err='Wrong Username and Password';
+			document.getElementById("error").innerHTML= err;
+        }
+        else if(xhr.responseText == "TRUE")
+        {
+            fetch_and_display_posts();
+            $("#latest_link").click();
+        }
+    }   
+    xhr.send();
+});
 
 function fetch_and_display_posts()
 {
