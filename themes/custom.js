@@ -110,6 +110,23 @@ function login()
     xhr.send();
 }
 
+function logout()
+{
+	
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=logout");
+    xhr.onload = function(){
+		//alert(xhr.responseText);
+        if(xhr.responseText == "TRUE")
+        {
+            fetch_and_display_posts();
+            $("#logout_link").click();
+        }
+    }   
+    xhr.send();
+}
+
 function open_browser(link)
 {
     window.open(link, '_blank', 'location=yes');
