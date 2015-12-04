@@ -1,117 +1,117 @@
-<!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>wp app</title>
-<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
-<link href="jquery-mobile/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
-<link href="jquery-mobile/tenders.min.css" rel="stylesheet" type="text/css"/>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tenders.lk</title>
+	<link rel="stylesheet" href="themes/tenders.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/custom.css" />
+	<script src="themes/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).bind('mobileinit',function(){
+        $.mobile.pushStateEnabled = false;
+    });
+	</script>
+	<script src="themes/jquery.mobile-1.4.5.min.js"></script>
+    <script src="themes/custom.js"></script>
+</head>
+<body>
 
-
-        
-        <title>Wild</title>
-    </head>
-    <body>
-    <div data-role="page" id="page">
-	<div data-role="header">
-		<h1>Page One</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a href="#page2">Page Two</a></li>
-            <li><a href="#page3">Page Three</a></li>
-			<li><a href="#page4">Page Four</a></li>
-		</ul>		
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div>
-</div>
-
-<div data-role="page" id="page2">
-	<div data-role="header">
-		<h1>Page Two</h1>
-	</div>
-	<div data-role="content">
-    <div id="posts"></div>	
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div>
-</div>
-
-<div data-role="page" id="page3">
-	<div data-role="header">
-		<h1>Page Three</h1>
-	</div>
-	<div data-role="content">	
-		
-
-            <div data-role="main" class="ui-content">
-                <input id="username" type="text" placeholder="Enter Username">
-                <input id="password" type="password" placeholder="Enter Password">
-                <button onclick="login();">Login</button>
-                <a href="#page2" id="page_two_link"></a>
+<!--Login Page start-->
+	<div data-role="page" id="login" data-theme="a" class="login-page">
+		<div data-role="header" data-position="inline">
+			<h1>Tenders.lk</h1>
+		</div>
+		<div data-role="content" data-theme="a" class="login-content">
+            <div class="ui-field-contain">
+                <input name="username" id="username" placeholder="Enter Username" value="" type="text">
+                <input name="password" id="password" placeholder="Enter Password" value="" type="password">
+                </br>
+                <button class="ui-btn" onClick="login();">Login</button>
+                </br>
+                <div id="error" align="center"></div>
+                <a href="#latest" id="latest_link"></a>
                 
             </div>
-
-            
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div>
-</div>
-
-<div data-role="page" id="page4">
-	<div data-role="header">
-		<h1>Page Four</h1>
-	</div>
-	<div data-role="content">	
-		Content		
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div>
-</div>
-
-    <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
-   
-<script>
-$(document).bind('mobileinit',function(){
-    $.mobile.changePage.defaults.changeHash = false;
-    $.mobile.hashListeningEnabled = false;
-    $.mobile.pushStateEnabled = false;
-});
-</script>
-
-<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
-<script src="jquery-mobile/custom.js" type="text/javascript"></script>
-<script type="text/javascript" src="cordova.js"></script>
-    
+		</div>
         
-    </body>
+        <div data-role="footer" data-position="inline" class="login-footer">
+			<h1>© Tenders.lk</h1>
+		</div>
+	</div>
+<!--Login page end-->
+
+<!--Latest Page start-->
+	<div data-role="page" id="latest" data-theme="a">
+		<div data-role="header" data-position="inline">
+            <div data-role="navbar" data-theme="a">
+                <ul>
+                    <li><a href="#latest" data-icon="grid" class="ui-btn-active">Latest</a></li>
+                    <li><a href="" data-icon="star">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="gear">Categories</a></li>
+                </ul>
+            </div><!-- /navbar -->
+			
+		</div>
+		<div data-role="content" data-theme="a" id="latest-content"></div>
+        
+        <div data-role="footer" data-position="inline">
+			<h1>© Tenders.lk</h1>
+		</div>
+	</div>
+<!--Latest page end-->
+
+<!--Category Page start-->
+	<div data-role="page" id="category" data-theme="a">
+		<div data-role="header" data-position="inline">
+            <div data-role="navbar" data-theme="a">
+                <ul>
+                    <li><a href="#latest" data-icon="grid" class="ui-btn-active">Latest</a></li>
+                    <li><a href="" data-icon="star">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="gear">Categories</a></li>
+                </ul>
+            </div><!-- /navbar -->
+			
+		</div>
+		<div data-role="content" data-theme="a">
+        	<ul data-role="listview" data-count-theme="b" data-inset="true">
+                <li><a href="#">Inbox <span class="ui-li-count">12</span></a></li>
+                <li><a href="#">Outbox <span class="ui-li-count">0</span></a></li>
+                <li><a href="#">Drafts <span class="ui-li-count">4</span></a></li>
+                <li><a href="#">Sent <span class="ui-li-count">328</span></a></li>
+                <li><a href="#">Trash <span class="ui-li-count">62</span></a></li>
+            </ul>	
+		</div>
+        
+        <div data-role="footer" data-position="inline">
+			<h1>© Tenders.lk</h1>
+		</div>
+	</div>
+<!--Category page end-->
+
+
+<!--Single tender Page start-->
+	<div data-role="page" id="single" data-theme="a">
+		<div data-role="header" data-position="inline">
+            <div data-role="navbar" data-theme="a">
+                <ul>
+                    <li><a href="#latest" data-icon="grid" class="ui-btn-active">Latest</a></li>
+                    <li><a href="" data-icon="star">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="gear">Categories</a></li>
+                </ul>
+            </div><!-- /navbar -->
+			
+		</div>
+		<div data-role="content" data-theme="a">
+        	
+		</div>
+        
+        <div data-role="footer" data-position="inline">
+			<h1>© Tenders.lk</h1>
+		</div>
+	</div>
+<!--Single tender page page end-->
+
+</body>
 </html>

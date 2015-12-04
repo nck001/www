@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.login-content{
+	background-color:#FF9600;
+	padding:10%;
+	top:10%;
+	position:absolute;
+	width:80%;
+	}
+.login-footer{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	}
+.login-page{
+	background-color:#FF9600;
+	}
+#error{
+	color:#FFF;
+	}
