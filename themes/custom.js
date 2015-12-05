@@ -36,7 +36,7 @@ function fetch_and_display_posts()
 
 
 
-        var html = '<ul data-role="listview" data-inset="true">';
+        var html = '<ul data-role="listview" data-inset="true"><li data-role="list-divider">' + date +'<span class="ui-li-count">2</span>';
 		
 
         for(var count = 0; count < posts_array.length; count++)
@@ -46,9 +46,9 @@ function fetch_and_display_posts()
             var date = posts_array[count][2];
             //var image = posts_array[count][3];
 
-            html = html + '<li data-role="list-divider">' + date +'<span class="ui-li-count">2</span><li><a href="#single"><h2>'+title+'</h2>'+
-						  '<p>categories</p>'+
-						  '<p class="ui-li-aside"><strong>6:24</strong>PM</p>'+
+            html = html + '<li><a href="#single"><p><b>'+title+'</b></p>'+
+						 // '<p>categories</p>'+
+						  
                 		  '</a></li>'
 							
         }
