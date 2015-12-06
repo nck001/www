@@ -137,6 +137,57 @@ function post_content(urllink)
 	
 }
 
+function category()
+{
+	
+	var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=category");
+    xhr.onload = function(){
+		//alert(xhr.responseText);
+        
+		//alert(posts_array);
+
+		if(xhr.responseText == "FALSE")
+        {
+            $("#logout_link").click();
+			//chkEmpty ="FALSE";
+        }
+		else {
+
+
+		var cat_array = JSON.parse(xhr.responseText);
+		var html = '<ul data-role="listview" data-count-theme="a" data-inset="true">';
+		
+		
+        for(var count = 0; count < cat_array.length; count++)
+        {
+				 html = html + '<li><a href="#latest" onClick="cat_posts();" >'+cat_array[count]+'</a></li>';	  
+							
+        }
+		
+		html = html +'</ul>'
+        document.getElementById("cat-content").innerHTML = html;
+						var $list = $('#cat-content');
+						if ($list.hasClass('ui-listview')) {//this listview has already been initialized so refresh it
+							$list.listview('refresh');
+						} else {//this list needs to be initialized
+							$list.trigger('create');
+						}
+	
+						
+    }//else
+	
+	}//onload
+	
+    xhr.send();
+	
+	
+}
+
+function cat_posts(){
+	
+	}
+
 
 
 function login()
