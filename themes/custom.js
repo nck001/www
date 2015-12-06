@@ -71,7 +71,7 @@ function fetch_and_display_posts(status)
             //var image = posts_array[count][3];
 			
 			if(date!=prevDate){
-				 html = html + '<li data-role="list-divider">' + date +'<span class="ui-li-count">'+posts_array[0]+'</span>';
+				 html = html + '<li data-role="list-divider">' + date +'<!--<span class="ui-li-count">'+posts_array[0]+'</span>-->';
 				}
 
             html = html + '<li><a href="#single" onClick="post_content(\''+link+'\');"><p><b>'+title+'</b></p>'+
