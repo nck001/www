@@ -161,7 +161,7 @@ function category()
 		
         for(var count = 0; count < cat_array.length; count++)
         {
-				 html = html + '<li><a href="#latest" onClick="cat_posts();" >'+cat_array[count]+'</a></li>';	  
+				 html = html + '<li><a href="#catposts" onClick="cat_posts(\''+cat_array[count]+'\',\'LATEST\');" >'+cat_array[count]+'</a></li>';	  
 							
         }
 		
@@ -184,7 +184,94 @@ function category()
 	
 }
 
-function cat_posts(){
+
+var cat_page =0;
+var categ = '';
+
+function cat_posts(category,cpage){
+	//alert('hello');
+	//var chkEmpty ="EMPTY";
+	//var dateCnt =15;
+	
+	
+	if (category == 'CAT'){
+			category = categ;
+		}else{
+	
+	categ = category;}
+	
+	
+	if (cpage=="OLD"){
+	cat_page = cat_page+1;
+	}else
+	
+	if (cpage=="NEW"&&cat_page>1){
+	cat_page = cat_page-1;
+	}else
+	
+	if (cpage=="LATEST"&&cat_page>1){
+	cat_page = 1;	
+	}
+	
+	
+	
+	var xhr = new XMLHttpRequest();
+	
+	//while(chkEmpty == "EMPTY"){
+	
+    
+    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=cat_posts&cat_page=" + encodeURIComponent(cat_page)+ "&category=" + encodeURIComponent(category));
+    xhr.onload = function(){
+		//alert(xhr.responseText);
+        
+		//alert(posts_array);
+
+		if(xhr.responseText == "FALSE")
+        {
+            $("#logout_link").click();
+			//chkEmpty ="FALSE";
+        }
+		else {
+
+
+		var posts_array = JSON.parse(xhr.responseText);
+        var html = '<ul data-role="listview" data-inset="true">';
+		
+		var prevDate = '';
+        for(var count = 1; count < posts_array.length; count++)
+        {
+            var title = posts_array[count][0];
+            var link = posts_array[count][1];
+            var date = posts_array[count][2];
+            //var image = posts_array[count][3];
+			
+			if(date!=prevDate){
+				 html = html + '<li data-role="list-divider">' + date +'<!--<span class="ui-li-count">'+posts_array[0]+'</span>-->';
+				}
+
+            html = html + '<li><a href="#single" onClick="post_content(\''+link+'\');"><p><b>'+title+'</b></p>'+
+						 // '<p>categories</p>'+
+						  
+                		  '</a></li>'
+			prevDate = date;			  
+							
+        }
+		//chkEmpty ="TRUE";
+		html = html +'</li></ul>'
+        document.getElementById("catpost-content").innerHTML = html;
+						var $list = $('#catpost-content');
+						if ($list.hasClass('ui-listview')) {//this listview has already been initialized so refresh it
+							$list.listview('refresh');
+						} else {//this list needs to be initialized
+							$list.trigger('create');
+						}
+						
+						
+    }//else
+	
+	}//onload
+	
+    xhr.send();
 	
 	}
 

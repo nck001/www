@@ -70,6 +70,9 @@
 	</div>
 <!--Latest page end-->
 
+
+
+
 <!--Category Page start-->
 	<div data-role="page" id="category" data-theme="a">
 		<div data-role="header" data-position="inline" class="header-top">
@@ -89,6 +92,37 @@
 		</div>
 	</div>
 <!--Category page end-->
+
+<!--category posts start-->
+
+	<div data-role="page" id="catposts" data-theme="a">
+		<div data-role="header" data-position="inline" class="header-top">
+            <div data-role="navbar" data-theme="a">
+                <ul>
+                    <li><a href="#latest" data-icon="grid" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="" data-icon="star">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="gear" onClick="category();">Categories</a></li>
+                </ul>
+            </div><!-- /navbar -->
+			
+		</div>
+		<div data-role="content" data-theme="a" id="catpost-content"></div>
+        <div data-role="navbar">
+            <ul>
+                <li><button class="ui-btn" onClick="cat_posts('CAT','NEW');">NEW</button></li>
+                <li><button class="ui-btn"onClick="cat_posts('CAT','OLD');">OLD</button></li>
+            </ul>
+        </div><!-- /navbar -->
+        <div data-role="footer" data-position="inline">
+			<h1>© Tenders.lk</h1>
+    		<div class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear logout" onClick="logout();">Log Out</div>
+
+		</div>
+        <a href="#login" id="logout_link" ></a>
+	</div>
+
+
+<!--category posts end-->
 
 
 <!--Single tender Page start-->
