@@ -124,7 +124,7 @@ function post_content(urllink)
 		var post_array = JSON.parse(xhr.responseText);
 		var title = post_array[0];
 		var content = post_array[1];
-        var html = '<h3>'+title+'</h3><br>'+content;
+        var html = '<h3 style = "text-align: center;">'+title+'</h3><br>'+content;
 		document.getElementById("single-content").innerHTML = html;
 	
 						
