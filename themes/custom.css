@@ -1,20 +1,33 @@
 @charset "utf-8";
 /* CSS Document */
 
+#title{
+	color:#FFF;
+	
+	}
+
 .login-content{
-	background-color:#FF9600;
+	
 	padding:10%;
 	top:10%;
 	position:absolute;
 	width:80%;
+	background-color: transparent;
+	
 	}
-.login-footer{
-	position:absolute;
-	width:100%;
-	bottom:0;
-	}
+	
+
 .login-page{
-	background-color:#FF9600;
+	background:
+		-webkit-linear-gradient(45deg, hsla(0, 100%, 53%, 1) 0%, hsla(0, 100%, 53%, 0) 70%),
+		-webkit-linear-gradient(315deg, hsla(42, 100%, 52%, 1) 10%, hsla(42, 100%, 52%, 0) 80%),
+		-webkit-linear-gradient(225deg, hsla(15, 100%, 52%, 1) 10%, hsla(15, 100%, 52%, 0) 80%),
+		-webkit-linear-gradient(135deg, hsla(1, 100%, 52%, 1) 100%, hsla(1, 100%, 52%, 0) 70%);
+	background:
+		linear-gradient(45deg, hsla(0, 100%, 53%, 1) 0%, hsla(0, 100%, 53%, 0) 70%),
+		linear-gradient(135deg, hsla(42, 100%, 52%, 1) 10%, hsla(42, 100%, 52%, 0) 80%),
+		linear-gradient(225deg, hsla(15, 100%, 52%, 1) 10%, hsla(15, 100%, 52%, 0) 80%),
+		linear-gradient(315deg, hsla(1, 100%, 52%, 1) 100%, hsla(1, 100%, 52%, 0) 70%);
 	}
 #error{
 	color:#FFF;
