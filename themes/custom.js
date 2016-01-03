@@ -91,7 +91,7 @@ function fetch_and_display_posts(status)
 							$list.trigger('create');
 						}
 						
-						
+		 window.scrollTo(0, 0);				
     }//else
 	
 	}//onload
@@ -265,7 +265,7 @@ function cat_posts(category,cpage){
 						} else {//this list needs to be initialized
 							$list.trigger('create');
 						}
-						
+		 window.scrollTo(0, 0);				
 						
     }//else
 	
