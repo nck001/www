@@ -33,3 +33,11 @@ img{
 	margin-left: auto;
     margin-right: auto 
 	}
+.footer{
+	bottom:0;
+	position:absolute;
+	width:100%;
+	}
+#single-content{
+	margin-bottom:50px;
+	}

@@ -47,9 +47,9 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="grid" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
-                    <li><a href="" data-icon="star">Tenders.lk</a></li>
-                    <li><a href="#category" data-icon="gear" onClick="category();">Categories</a></li>
+                    <li><a href="#latest" data-icon="star" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
@@ -61,9 +61,9 @@
                 <li><button class="ui-btn"onClick="fetch_and_display_posts('OLD');">OLD</button></li>
             </ul>
         </div><!-- /navbar -->
-        <div data-role="footer" data-position="inline">
+        <div data-role="footer" class="footer" data-position="inline">
 			<h1>© Tenders.lk</h1>
-    		<div class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear logout" onClick="logout();">Log Out</div>
+    		<div class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-power logout" onClick="logout();">Log Out</div>
 
 		</div>
         <a href="#login" id="logout_link" ></a>
@@ -78,18 +78,20 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="grid" class="ui-btn-active">Latest</a></li>
-                    <li><a href="" data-icon="star">Tenders.lk</a></li>
-                    <li><a href="#category" data-icon="gear">Categories</a></li>
+                    <li><a href="#latest" data-icon="star" class="ui-btn-active">Latest</a></li>
+                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="bullets">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
 		</div>
 		<div data-role="content" data-theme="a" id="cat-content"></div>
         
-        <div data-role="footer" data-position="inline">
+        <div data-role="footer" class="footer" data-position="inline">
 			<h1>© Tenders.lk</h1>
+            <div class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-power logout" onClick="logout();">Log Out</div>
 		</div>
+        <a href="#login" id="logout_link" ></a>
 	</div>
 <!--Category page end-->
 
@@ -99,9 +101,9 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="grid" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
-                    <li><a href="" data-icon="star">Tenders.lk</a></li>
-                    <li><a href="#category" data-icon="gear" onClick="category();">Categories</a></li>
+                    <li><a href="#latest" data-icon="star" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
@@ -130,9 +132,9 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="grid" class="ui-btn-active">Latest</a></li>
-                    <li><a href="" data-icon="star">Tenders.lk</a></li>
-                    <li><a href="#category" data-icon="gear">Categories</a></li>
+                    <li><a href="#latest" data-icon="star" class="ui-btn-active">Latest</a></li>
+                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="bullets">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
@@ -141,9 +143,11 @@
         	
 		</div>
         
-        <div data-role="footer" data-position="inline">
+        <div data-role="footer" class="footer" data-position="inline">
 			<h1>© Tenders.lk</h1>
+            <div class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-power logout" onClick="logout();">Log Out</div>
 		</div>
+        <a href="#login" id="logout_link" ></a>
 	</div>
 <!--Single tender page page end-->
 
