@@ -1,9 +1,9 @@
 // JavaScript Document
-
+var URL = "http://alzlanka.org/test/";
 // A $( document ).ready() block.
 $( document ).ready(function() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=login");
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=login");
     xhr.onload = function(){
         if(xhr.responseText == "FALSE")
         {
@@ -45,7 +45,7 @@ function fetch_and_display_posts(status)
 	//while(chkEmpty == "EMPTY"){
 	
     
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=posts&page=" + encodeURIComponent(page));
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=posts&page=" + encodeURIComponent(page));
     xhr.onload = function(){
 		//alert(xhr.responseText);
         
@@ -107,7 +107,7 @@ function post_content(urllink)
 {
 	
 	var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=single&link=" + encodeURIComponent(urllink));
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=single&link=" + encodeURIComponent(urllink));
     xhr.onload = function(){
 		//alert(xhr.responseText);
         
@@ -124,7 +124,7 @@ function post_content(urllink)
 		var post_array = JSON.parse(xhr.responseText);
 		var title = post_array[0];
 		var content = post_array[1];
-        var html = '<h3 style = "text-align: center;">'+title+'</h3><br>'+content;
+        var html = '<h3 style = "text-align: center;">'+title+'</h3><br><div id="scale">'+content+'</div>';
 		document.getElementById("single-content").innerHTML = html;
 	
 						
@@ -141,7 +141,7 @@ function category()
 {
 	
 	var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=category");
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=category");
     xhr.onload = function(){
 		//alert(xhr.responseText);
         
@@ -220,7 +220,7 @@ function cat_posts(category,cpage){
 	//while(chkEmpty == "EMPTY"){
 	
     
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=cat_posts&cat_page=" + encodeURIComponent(cat_page)+ "&category=" + encodeURIComponent(category));
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=cat_posts&cat_page=" + encodeURIComponent(cat_page)+ "&category=" + encodeURIComponent(category));
     xhr.onload = function(){
 		//alert(xhr.responseText);
         
@@ -300,7 +300,7 @@ function login()
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=login&username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=login&username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
     xhr.onload = function(){
         if(xhr.responseText == "FALSE")
         {
@@ -322,7 +322,7 @@ function logout()
 	
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://alzlanka.org/test/wp-admin/admin-ajax.php?action=logout");
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=logout");
     xhr.onload = function(){
 		//alert(xhr.responseText);
         if(xhr.responseText == "TRUE")

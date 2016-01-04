@@ -15,6 +15,17 @@
 	</script>
 	<script src="themes/jquery.mobile-1.4.5.min.js"></script>
     <script src="themes/custom.js"></script>
+    <script type="text/javascript" src="themes/jquery.touch.js"></script>
+    <script type="text/javascript" src="themes/jquery.gesture.js"></script>
+    <script type="text/javascript" src="themes/jquery.gesture2.js"></script>
+     <script type="text/javascript">
+    $("#scale").gesture({
+    drag: true,
+    scale: true,
+    touchtarget: null
+});
+	</script>
+    
 </head>
 <body>
 
@@ -77,9 +88,9 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="star" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
                     <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
-                    <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
+                    <li><a href="#category" data-icon="bullets" class="ui-btn-active" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
@@ -100,9 +111,9 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="star" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
                     <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
-                    <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
+                    <li><a href="#category" data-icon="bullets" class="ui-btn-active" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
@@ -131,13 +142,14 @@
 		<div data-role="header" data-position="inline" class="header-top">
             <div data-role="navbar" data-theme="a">
                 <ul>
-                    <li><a href="#latest" data-icon="star" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
                     <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
                     <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
 			
 		</div>
+        
 		<div data-role="content" data-theme="a" id="single-content">
         	
 		</div>
