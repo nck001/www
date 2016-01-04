@@ -1,5 +1,5 @@
 // JavaScript Document
-var URL = "http://alzlanka.org/test/";
+var URL = "http://tenders.lk/";
 // A $( document ).ready() block.
 $( document ).ready(function() {
     var xhr = new XMLHttpRequest();
