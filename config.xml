@@ -20,7 +20,6 @@
   <preference name="android-installLocation" value="auto"/>
   <gap:plugin name="org.apache.cordova.battery-status" source="npm"/>
   <gap:plugin name="org.apache.cordova.inappbrowser" source="npm"/>
-  <gap:plugin name="org.apache.cordova.network-information" source="npm"/>
   <gap:plugin name="org.apache.cordova.splashscreen" source="npm"/>
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <gap:platform name="ios" />
