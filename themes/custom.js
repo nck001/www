@@ -1,5 +1,6 @@
 // JavaScript Document
 var URL = "http://tenders.lk/";
+//var URL = "http://alzlanka.org/test/";
 // A $( document ).ready() block.
 $( document ).ready(function() {
     var xhr = new XMLHttpRequest();
@@ -161,7 +162,7 @@ function category()
 		
         for(var count = 0; count < cat_array.length; count++)
         {
-				 html = html + '<li><a href="#catposts" onClick="cat_posts(\''+cat_array[count]+'\',\'LATEST\');" >'+cat_array[count]+'</a></li>';	  
+				 html = html + '<li><a href="#catposts" onClick="cat_posts(\''+cat_array[count][0]+'\',\'LATEST\',\''+cat_array[count][1]+'\');" >'+cat_array[count][0]+'</a></li>';	  
 							
         }
 		
@@ -187,8 +188,9 @@ function category()
 
 var cat_page =0;
 var categ = '';
+var catid = '';
 
-function cat_posts(category,cpage){
+function cat_posts(category,cpage,categid){
 	//alert('hello');
 	//var chkEmpty ="EMPTY";
 	//var dateCnt =15;
@@ -198,7 +200,15 @@ function cat_posts(category,cpage){
 			category = categ;
 		}else{
 	
-	categ = category;}
+	categ = category;
+	}
+	
+	if (categid == 'ID'){
+			categid = catid;
+		}else{
+	
+	catid = categid;
+	}
 	
 	
 	if (cpage=="OLD"){
@@ -220,7 +230,7 @@ function cat_posts(category,cpage){
 	//while(chkEmpty == "EMPTY"){
 	
     
-    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=cat_posts&cat_page=" + encodeURIComponent(cat_page)+ "&category=" + encodeURIComponent(category));
+    xhr.open("GET", URL+"wp-admin/admin-ajax.php?action=cat_posts&cat_page=" + encodeURIComponent(cat_page)+ "&category=" + encodeURIComponent(category)+ "&categoryid=" + encodeURIComponent(categid));
     xhr.onload = function(){
 		//alert(xhr.responseText);
         
