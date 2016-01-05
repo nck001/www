@@ -186,7 +186,7 @@ function category()
 }
 
 
-var cat_page =0;
+var cat_page =1;
 var categ = '';
 var catid = '';
 
