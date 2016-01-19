@@ -7,12 +7,14 @@
 	}
 
 .login-content{
-	position:fixed;
+	position:absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	width:400px;
 	background-color: transparent;
 	
@@ -20,12 +22,14 @@
 	
 @media screen and (max-width: 480px) {
    .login-content{
-	position: fixed;
+	position:absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	width:80%;
 	background-color: transparent;
 	
@@ -38,6 +42,19 @@
 		-webkit-linear-gradient(315deg, hsla(42, 100%, 52%, 1) 10%, hsla(42, 100%, 52%, 0) 80%),
 		-webkit-linear-gradient(225deg, hsla(15, 100%, 52%, 1) 10%, hsla(15, 100%, 52%, 0) 80%),
 		-webkit-linear-gradient(135deg, hsla(1, 100%, 52%, 1) 100%, hsla(1, 100%, 52%, 0) 70%);
+		
+	background:
+		-o-linear-gradient(45deg, hsla(0, 100%, 53%, 1) 0%, hsla(0, 100%, 53%, 0) 70%),
+		-o-linear-gradient(315deg, hsla(42, 100%, 52%, 1) 10%, hsla(42, 100%, 52%, 0) 80%),
+		-o-linear-gradient(225deg, hsla(15, 100%, 52%, 1) 10%, hsla(15, 100%, 52%, 0) 80%),
+		-o-linear-gradient(135deg, hsla(1, 100%, 52%, 1) 100%, hsla(1, 100%, 52%, 0) 70%);
+		
+	background:
+		-moz-linear-gradient(45deg, hsla(0, 100%, 53%, 1) 0%, hsla(0, 100%, 53%, 0) 70%),
+		-moz-linear-gradient(315deg, hsla(42, 100%, 52%, 1) 10%, hsla(42, 100%, 52%, 0) 80%),
+		-moz-linear-gradient(225deg, hsla(15, 100%, 52%, 1) 10%, hsla(15, 100%, 52%, 0) 80%),
+		-moz-linear-gradient(135deg, hsla(1, 100%, 52%, 1) 100%, hsla(1, 100%, 52%, 0) 70%);		
+		
 	background:
 		linear-gradient(45deg, hsla(0, 100%, 53%, 1) 0%, hsla(0, 100%, 53%, 0) 70%),
 		linear-gradient(135deg, hsla(42, 100%, 52%, 1) 10%, hsla(42, 100%, 52%, 0) 80%),
@@ -46,6 +63,11 @@
 	}
 #error{
 	color:#FFF;
+	}
+#about-link a{
+	color:#FF9A7D;
+	text-decoration:none;
+	text-shadow:none;
 	}
 .logout{
 	margin-top:-1px;
@@ -66,7 +88,18 @@ img{
 	position:absolute;
 	width:100%;
 	}
-#single-content{
+#single-content, #about-content, #cat-content{
 	margin-bottom:50px;
 	
 	}
+#contact{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+	text-align: center;
+  }	
+#register{
+	max-width: 400px;
+    margin: auto;
+	 } 
+  

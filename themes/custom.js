@@ -1,6 +1,6 @@
 // JavaScript Document
-var URL = "http://tenders.lk/";
-//var URL = "http://alzlanka.org/test/";
+//var URL = "http://tenders.lk/";
+var URL = "http://alzlanka.org/test/";
 // A $( document ).ready() block.
 $( document ).ready(function() {
     var xhr = new XMLHttpRequest();
@@ -10,7 +10,7 @@ $( document ).ready(function() {
         {
             //alert("Wrong Username and Password", null, "Wrong Creds", "Try Again");
 			err='Wrong Username and Password';
-			document.getElementById("error").innerHTML= err;
+			//document.getElementById("error").innerHTML= err;
         }
         else if(xhr.responseText == "TRUE")
         {

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -15,8 +16,6 @@
 	</script>
 	<script src="themes/jquery.mobile-1.4.5.min.js"></script>
     <script src="themes/custom.js"></script>
-    
-    
 </head>
 <body>
 
@@ -24,9 +23,9 @@
 	<div data-role="page" id="login" data-theme="a" class="login-page">
 		
 		<div data-role="content" data-theme="a" class="login-content">
-        <div id="title" align="center" >
-        <h1>Tenders.lk</h1>
-        </div>
+            <div id="title" align="center" >
+            	<h1>Tenders.lk</h1>
+            </div>
             <div class="ui-field-contain">
                 <input name="username" id="username" placeholder="Enter Username" value="" type="text">
                 <input name="password" id="password" placeholder="Enter Password" value="" type="password">
@@ -34,11 +33,12 @@
                 <button class="ui-btn" onClick="login();">Login</button>
                 </br>
                 <div id="error" align="center"></div>
+                <br>
+                <div id="about-link" align="center"><a href="#about">About Tenders.lk</a></div>
                 <a href="#latest" id="latest_link"></a>
                 
             </div>
 		</div>
-        
         
 	</div>
 <!--Login page end-->
@@ -49,7 +49,7 @@
             <div data-role="navbar" data-theme="a">
                 <ul>
                     <li><a href="#latest" data-icon="star" class="ui-btn-active" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
-                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#about" data-icon="home">Tenders.lk</a></li>
                     <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
@@ -80,7 +80,7 @@
             <div data-role="navbar" data-theme="a">
                 <ul>
                     <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
-                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#about" data-icon="home">Tenders.lk</a></li>
                     <li><a href="#category" data-icon="bullets" class="ui-btn-active" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
@@ -103,7 +103,7 @@
             <div data-role="navbar" data-theme="a">
                 <ul>
                     <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
-                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#about" data-icon="home">Tenders.lk</a></li>
                     <li><a href="#category" data-icon="bullets" class="ui-btn-active" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
@@ -134,7 +134,7 @@
             <div data-role="navbar" data-theme="a">
                 <ul>
                     <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
-                    <li><a href="" data-icon="home" style="pointer-events: none; cursor: default;">Tenders.lk</a></li>
+                    <li><a href="#about" data-icon="home">Tenders.lk</a></li>
                     <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
                 </ul>
             </div><!-- /navbar -->
@@ -152,6 +152,49 @@
         <a href="#login" id="logout_link" ></a>
 	</div>
 <!--Single tender page page end-->
+
+<!--About Page start-->
+	<div data-role="page" id="about" data-theme="a">
+		<div data-role="header" data-position="inline" class="header-top">
+            <div data-role="navbar" data-theme="a">
+                <ul>
+                    <li><a href="#latest" data-icon="star" onClick="fetch_and_display_posts('LATEST');">Latest</a></li>
+                    <li><a href="#about" data-icon="home" class="ui-btn-active" >Tenders.lk</a></li>
+                    <li><a href="#category" data-icon="bullets" onClick="category();">Categories</a></li>
+                </ul>
+            </div><!-- /navbar -->
+			
+		</div>
+        
+		<div data-role="content" data-theme="a" id="about-content">
+        <h3 align="center">About</h3>
+        <p style="text-align:justify;">Tenders.lk is the leading online Tender Alert System which emails new tender alerts to subscribers that match their chosen tender categories automatically, on a daily basis. This provides a fully automated method of informing the subscribers about new invitations to tenders that they might be interested in. Most of the invitations to tenders.lk are obtained from news papers published by Central Government and Local Councils which include an array of industries such as Engineering and construction, Health and Medicine, IT and electrical, supplier registrations etc.</p><hr>
+       
+            <div id="contact">
+            <b>Address</b></br>
+            <p>RNH House, 622B, Kotte Road, Kotte, Colombo</p></br>
+            <b>Phone Number</b></br>
+            <p>(+94) 773 887 615</p></br>
+            <b>Email Address</b></br>
+            <p>info@tenders.lk</p></br>
+            <b>Website</b></br>
+            <p><a href="http://tenders.lk" target="_blank">tenders.lk/</a></p>
+              
+            </div>
+            <hr>
+            </br>
+            <div id="register">
+            <a href="http://tenders.lk/register/" target="_blank" class="ui-btn ui-icon-edit ui-btn-icon-left">REGISTER NOW</a>
+			</div>
+        	
+		</div>
+        
+        <div data-role="footer" id="footer" data-position="inline">
+			<h1>© Tenders.lk</h1>
+		</div>
+	</div>
+<!--About page page end-->
+
 
 </body>
 </html>
