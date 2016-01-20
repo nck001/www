@@ -125,7 +125,10 @@ function post_content(urllink)
 		var post_array = JSON.parse(xhr.responseText);
 		var title = post_array[0];
 		var content = post_array[1];
-        var html = '<h3 style = "text-align: center;">'+title+'</h3><br><div id="scale">'+content+'</div>';
+		var id = post_array[2];
+		var paper = post_array[3];
+		var date = post_array[4];
+        var html = '<div style = "text-align: center;"><h3>'+title+'</h3><hr><p><b>TENDER ID &nbsp;: </b>'+id+'</p><p><b>PUBLISHED ON : </b>'+date+'</p><p><b>NEWS PAPER : </b>'+paper+'</p><hr></div><br><div id="scale">'+content+'</div>';
 		document.getElementById("single-content").innerHTML = html;
 	
 						
