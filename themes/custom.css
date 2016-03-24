@@ -69,6 +69,13 @@
 	text-decoration:none;
 	text-shadow:none;
 	}
+
+#lost-link a{
+	color:#FFF;
+	text-decoration:underline;
+	text-shadow:none;
+	}
+
 .logout{
 	margin-top:-1px;
 	}
